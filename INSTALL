@@ -1,0 +1,9 @@
+Building Girlcoin
+
+See doc/readme-qt.rst for instructions on building girlcoin-QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of girlcoin.
+
+See doc/build-*.txt for instructions on building girlcoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of girlcoin.
