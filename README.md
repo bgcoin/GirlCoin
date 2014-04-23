@@ -2,8 +2,7 @@
 http://www.girlcoin.org/
 
 ## What is girlcoin?
-Girlcoin is like Bitcoin, but based on Litecoin, and also much more wow.
-http://www.girlcoin.org
+Girlcoin is like Bitcoin, but based on Litecoin. http://www.girlcoin.org
 
 ## License
 Girlcoin is released under the terms of the MIT license. See [COPYING](COPYING)
