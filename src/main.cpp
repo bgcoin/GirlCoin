@@ -1821,6 +1821,44 @@ bool CBlock::CheckBlock() const
 {
     // These are checks that are independent of context
     // that can be verified before saving an orphan block.
+    
+    // --- patch start
+    // blacklist
+	if (GetHash() == uint256("0x33130f4336011ade704578106c5e4a51d0f55f68f92b30be133d86601fd63618"))
+        return error("CheckBlock() 59501: hash == 33130f4336011ade704578106c5e4a51d0f55f68f92b30be133d86601fd63618");
+	if (GetHash() == uint256("0x3490781b2fce8183e27b066d80012abe21afa40b08d9aee168f92e2e4d0a0fb2"))
+        return error("CheckBlock() 59502: hash == 3490781b2fce8183e27b066d80012abe21afa40b08d9aee168f92e2e4d0a0fb2");
+	if (GetHash() == uint256("0x6e0426a56c4921942f67b126c408f7bd4b4e21d0c139619a41e00d5fae2c39e2"))
+        return error("CheckBlock() 59503: hash == 6e0426a56c4921942f67b126c408f7bd4b4e21d0c139619a41e00d5fae2c39e2");
+	if (GetHash() == uint256("0x809a86732542a905b48297c9772f36ee0a68aec5b9df1a1ba1373c5ce515ac2e"))
+        return error("CheckBlock() 59504: hash == 809a86732542a905b48297c9772f36ee0a68aec5b9df1a1ba1373c5ce515ac2e");
+	if (GetHash() == uint256("0x2ccb635644d08a0fcac23bafea63c214bd262adc2128e3df1e5e502728428ea0"))
+        return error("CheckBlock() 59505: hash == 2ccb635644d08a0fcac23bafea63c214bd262adc2128e3df1e5e502728428ea0");
+	if (GetHash() == uint256("0xfcb996bac5df484cb057259ac4bf4186704f30a8df3b61c1a36d05a1bc4f94ee"))
+        return error("CheckBlock() 59506: hash == fcb996bac5df484cb057259ac4bf4186704f30a8df3b61c1a36d05a1bc4f94ee");
+	if (GetHash() == uint256("0x299a70b95d3223f08966e326b90b465ba23aacd602e58a41f45408f67019c8d8"))
+        return error("CheckBlock() 59507: hash == 299a70b95d3223f08966e326b90b465ba23aacd602e58a41f45408f67019c8d8");
+	if (GetHash() == uint256("0xe82203158216226bb3dc67b6b2e666317733fd9fb3c3ae7aa5d137af7a0bb735"))
+        return error("CheckBlock() 59508: hash == e82203158216226bb3dc67b6b2e666317733fd9fb3c3ae7aa5d137af7a0bb735");
+	if (GetHash() == uint256("0x3d243aa74f63b375427abc8cd6a792cb2c0f3cf2d02a69e2c7a3eba19316789e"))
+        return error("CheckBlock() 59509: hash == 3d243aa74f63b375427abc8cd6a792cb2c0f3cf2d02a69e2c7a3eba19316789e");
+	if (GetHash() == uint256("0x27541d019ee49a665db35506c98deeb9fe72d0b265c4be930c5fb0aca80954df"))
+        return error("CheckBlock() 59510: hash == 27541d019ee49a665db35506c98deeb9fe72d0b265c4be930c5fb0aca80954df");
+	if (GetHash() == uint256("0x93e48d8fd8ae0838911bdf8777d824daf7a9630a4c145b1619f52b05cc1f6fee"))
+        return error("CheckBlock() 59511: hash == 93e48d8fd8ae0838911bdf8777d824daf7a9630a4c145b1619f52b05cc1f6fee");
+	if (GetHash() == uint256("0x4f0e1688d58574c1543f85ebaff65ba8ab2e0e013d18198db9453fe4fe7a0c15"))
+        return error("CheckBlock() 59512: hash == 4f0e1688d58574c1543f85ebaff65ba8ab2e0e013d18198db9453fe4fe7a0c15");
+	if (GetHash() == uint256("0x049975c5839568edc61a312f5470f68ddce9313515f12a671949f05c5b74d885"))
+        return error("CheckBlock() 59513: hash == 049975c5839568edc61a312f5470f68ddce9313515f12a671949f05c5b74d885");
+	if (GetHash() == uint256("0xe31fddb5ca851926b8fd0e72542001d627950ce4b79d06a168e9abd19550d178"))
+        return error("CheckBlock() 59514: hash == e31fddb5ca851926b8fd0e72542001d627950ce4b79d06a168e9abd19550d178");
+	if (GetHash() == uint256("0xbc199aeabe58d5cb387e815c1077ae616ac7fdf491e62657142e131bf087a0a1"))
+        return error("CheckBlock() 59515: hash == bc199aeabe58d5cb387e815c1077ae616ac7fdf491e62657142e131bf087a0a1");
+        if (GetHash() == uint256("0x63d213d56ae28b335ee52dfb1d64af261b5d25e25da79f57a114891cc98b4aea"))
+        return error("CheckBlock() 64033: hash == 63d213d56ae28b335ee52dfb1d64af261b5d25e25da79f57a114891cc98b4aea");
+	if (GetHash() == uint256("0x80e57e6a9ac42934e1b878d086893eb626480b2b9c99083d6d2a0fce380867a7"))
+        return error("CheckBlock() 68094: hash == 80e57e6a9ac42934e1b878d086893eb626480b2b9c99083d6d2a0fce380867a7");
+    // --- patch end
 
     // Size limits
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
